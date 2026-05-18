@@ -21,14 +21,6 @@ docs/integration                  AI provider 集成说明
 docs/release                      Windows 发布和冒烟测试说明
 ```
 
-不进入公开仓库的内容：
-
-- 研究实验沙箱和 benchmark 输出。
-- 本科论文、LaTeX 中间文件、个人草稿。
-- `node_modules`、`dist`、`target`、release staging/output。
-- SQLite 数据库、备份、缓存、日志、插件状态和本地运行时目录。
-- API key、`.env`、个人机器路径配置。
-
 ## 2. 一分钟理解项目
 
 AI Memory Card 是一个本地优先的智能复习系统。它做三件事：
