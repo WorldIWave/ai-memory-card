@@ -1,0 +1,30 @@
+{
+  "id": "rag-core",
+  "name": "AI Capability Plugin",
+  "version": "0.1.0",
+  "protocol_version": "1",
+  "platforms": ["windows-x64"],
+  "capabilities": {
+    "rag.generate_cards": {
+      "modes": ["api"],
+      "entrypoint": {
+        "base_url": "http://127.0.0.1:{port}",
+        "health": "http://127.0.0.1:{port}/health"
+      }
+    },
+    "evaluation.score_explanation": {
+      "modes": ["api"],
+      "entrypoint": {
+        "base_url": "http://127.0.0.1:{port}",
+        "health": "http://127.0.0.1:{port}/health"
+      }
+    },
+    "scheduler.plan_review": {
+      "modes": ["local"],
+      "entrypoint": {
+        "base_url": "http://127.0.0.1:{port}",
+        "health": "http://127.0.0.1:{port}/health"
+      }
+    }
+  }
+}

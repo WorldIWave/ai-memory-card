@@ -1,0 +1,14 @@
+{
+  "providers": {
+    "local_llm": {
+      "base_url": "",
+      "model": "",
+      "api_key": "",
+      "timeout": 120,
+      "temperature": 0,
+      "max_tokens": 1200,
+      "max_blocks": 40,
+      "max_chars": 1600
+    }
+  }
+}

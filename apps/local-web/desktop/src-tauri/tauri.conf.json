@@ -1,0 +1,43 @@
+{
+  "$schema": "../node_modules/@tauri-apps/cli/schema.json",
+  "build": {
+    "beforeDevCommand": "npm.cmd --prefix ../frontend run dev",
+    "beforeBuildCommand": "npm.cmd --prefix ../frontend run build",
+    "devPath": "http://127.0.0.1:5173",
+    "distDir": "../../frontend/dist",
+    "withGlobalTauri": true
+  },
+  "package": {
+    "productName": "AI Memory Card",
+    "version": "0.1.0"
+  },
+  "tauri": {
+    "allowlist": {
+      "dialog": {
+        "open": true
+      }
+    },
+    "bundle": {
+      "active": true,
+      "icon": [
+        "icons/icon.ico"
+      ],
+      "identifier": "com.aimemorycard.desktop",
+      "targets": [
+        "msi"
+      ],
+      "resources": {
+        "../.release-staging/runtime/backend": "backend",
+        "../.release-staging/runtime/plugins": "plugins",
+        "../.release-staging/runtime/python": "python",
+        "../.release-staging/runtime/runtime-manifest.json": "runtime-manifest.json"
+      },
+      "windows": {
+        "wix": {
+          "template": "./windows/current-user.wxs"
+        }
+      }
+    },
+    "windows": []
+  }
+}

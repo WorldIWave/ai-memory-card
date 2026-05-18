@@ -1,0 +1,28 @@
+/**
+ * Input: ??????????????  |  Output: ??????????
+ * Output: ???? summary ????????????
+ * Role: ?? analytics/data ??????????????
+ * Use: ???????????????????????????? feature ??
+ */
+import type { ReactNode } from "react";
+import { Card } from "./card";
+
+interface MetricCardProps {
+  label: string;
+  value: ReactNode;
+  hint?: string;
+  icon?: ReactNode;
+}
+
+export function MetricCard({ label, value, hint, icon }: MetricCardProps) {
+  return (
+    <Card className="grid gap-3">
+      <div className="flex items-start justify-between gap-3">
+        <p className="text-sm font-medium text-[var(--text-muted)]">{label}</p>
+        {icon ? <span className="text-[var(--color-primary)]">{icon}</span> : null}
+      </div>
+      <p className="ui-metric-value">{value}</p>
+      {hint ? <p className="text-xs text-[var(--text-muted)]">{hint}</p> : null}
+    </Card>
+  );
+}

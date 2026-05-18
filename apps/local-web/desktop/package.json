@@ -1,0 +1,25 @@
+{
+  "name": "ai-memory-card-desktop",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "doctor": "node scripts/doctor.mjs",
+    "test:doctor": "node --test scripts/doctor.test.mjs",
+    "test:prepare-release": "node --test scripts/prepare-release.test.mjs",
+    "test:release-local": "node --test scripts/release-local.test.mjs",
+    "test:portable": "node --test scripts/package-portable.test.mjs",
+    "test:run-tauri": "node --test scripts/run-tauri.test.mjs",
+    "dev:tauri": "tauri dev",
+    "build:tauri": "tauri build",
+    "build:release-runtime": "node scripts/prepare-release.mjs",
+    "build:portable": "node scripts/package-portable.mjs",
+    "test:rust:raw": "node scripts/run-rust.mjs test --manifest-path src-tauri/Cargo.toml",
+    "dev": "npm run doctor && node scripts/run-tauri.mjs dev:tauri",
+    "build": "npm run doctor && npm run build:release-runtime && node scripts/run-tauri.mjs build:tauri && npm run build:portable",
+    "release:local": "node scripts/release-local.mjs",
+    "test:rust": "npm run doctor && npm run test:rust:raw"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^1.6.0"
+  }
+}

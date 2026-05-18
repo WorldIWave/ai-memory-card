@@ -1,0 +1,19 @@
+/**
+ * Input: ????????  |  Output: Promise<StudySettingsRead>
+ * Output: ?????????????? API
+ * Role: ?? settings ????? app_study_settings ?????????
+ * Use: ???????? UI ?????????????? /api/settings ??
+ */
+import { apiRequest } from "./client";
+import type { StudySettingsRead, StudySettingsUpdateInput } from "./types";
+
+export function getStudySettings() {
+  return apiRequest<StudySettingsRead>("/api/settings/study");
+}
+
+export function updateStudySettings(payload: StudySettingsUpdateInput) {
+  return apiRequest<StudySettingsRead>("/api/settings/study", {
+    method: "PUT",
+    body: payload,
+  });
+}
