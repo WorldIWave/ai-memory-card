@@ -14,6 +14,18 @@
 <img src="https://img.shields.io/badge/AI-RAG%20%2B%20UACIS-6F42C1?style=flat-square" alt="RAG and UACIS" />
 <img src="https://img.shields.io/badge/License-MIT-green?style=flat-square" alt="MIT License" />
 
+<br />
+
+<p>
+  <a href="README.zh-CN.md">中文 README (Chinese README)</a> ·
+  <a href="docs/onboarding-guide.md">New Developer Onboarding Guide</a> ·
+  <a href="https://github.com/WorldIWave/ai-memory-card/releases">Download App</a>
+</p>
+
+<p>
+  <sub>Prefer Chinese docs? Start with the Chinese README. New contributors can use the onboarding guide as the project map.</sub>
+</p>
+
 </div>
 
 ---
@@ -31,6 +43,15 @@ In one loop:
 3. Ask the learner to actively explain a concept.
 4. Evaluate understanding across concept, mechanism, boundary, and misconception dimensions.
 5. Schedule the next review with either a traditional policy or an optional AI/RL-assisted policy.
+
+## Download and Use Directly
+
+If you only want to try the desktop app, open [GitHub Releases](https://github.com/WorldIWave/ai-memory-card/releases) and download the package that matches your need:
+
+- **Windows installer (`.msi`)**: recommended for normal users who want a standard install experience.
+- **Portable archive (`.zip`)**: useful when you want to unzip and run the app directly, or keep it in a custom folder.
+
+Developers can follow the source setup below.
 
 ## 中文简介
 
@@ -80,7 +101,7 @@ The backend owns durable state. The AI plugin can generate cards, evaluate expla
 ├─ apps/local-web/frontend/         React, Vite, TypeScript UI
 ├─ apps/local-web/desktop/          Tauri shell, runtime packaging, Windows release scripts
 ├─ apps/local-web/plugins/rag-core/ AI plugin runtime for RAG, evaluation, scheduling advice
-├─ docs/onboarding-guide.md         New developer map and cleanup decisions
+├─ docs/onboarding-guide.md         New developer onboarding guide and project map
 ├─ docs/development.md              Engineering boundaries and verification policy
 ├─ docs/integration/                Provider integration notes
 ├─ docs/release/                    Windows packaging and smoke-test docs
@@ -112,7 +133,7 @@ This makes the experimental scheduler useful without letting it take over the wh
 ### 1. Clone
 
 ```powershell
-git clone https://github.com/YOUR_NAME/ai-memory-card.git
+git clone https://github.com/WorldIWave/ai-memory-card.git
 cd ai-memory-card
 ```
 
@@ -218,7 +239,7 @@ If this project helps your work, you can cite it as:
   title        = {ai-memory-card: A Local-First Intelligent Review System with RAG and Understanding-Aware Scheduling},
   author       = {AI Memory Card Contributors},
   year         = {2026},
-  url          = {https://github.com/YOUR_NAME/ai-memory-card}
+  url          = {https://github.com/WorldIWave/ai-memory-card}
 }
 ```
 
