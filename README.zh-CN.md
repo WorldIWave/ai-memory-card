@@ -14,13 +14,13 @@
   </p>
 
   <p>
-    <a href="https://github.com/OWNER/ai-memory-card/stargazers">
-      <img src="https://img.shields.io/github/stars/OWNER/ai-memory-card?style=flat-square&logo=github&label=Stars" alt="GitHub stars" />
+    <a href="https://github.com/WorldIWave/ai-memory-card/stargazers">
+      <img src="https://img.shields.io/github/stars/WorldIWave/ai-memory-card?style=flat-square&logo=github&label=Stars" alt="GitHub stars" />
     </a>
     <a href="#license">
       <img src="https://img.shields.io/badge/License-MIT-green?style=flat-square" alt="License: MIT" />
     </a>
-    <a href="https://github.com/OWNER/ai-memory-card/releases">
+    <a href="https://github.com/WorldIWave/ai-memory-card/releases">
       <img src="https://img.shields.io/badge/Release-v0.1.0-blue?style=flat-square&logo=github" alt="Release" />
     </a>
     <img src="https://img.shields.io/badge/Python-3.11+-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python 3.11+" />
@@ -130,7 +130,26 @@ flowchart LR
 
 ---
 
+## 两种使用方式
+
+这个项目有两条入口，请按你的身份选择：
+
+### 普通用户：下载后直接使用
+
+如果你只是想使用桌面应用，请进入 [GitHub Releases](https://github.com/WorldIWave/ai-memory-card/releases)，按需求下载：
+
+- **Windows 安装包（`.msi`）**：适合大多数用户，双击安装后从开始菜单或桌面快捷方式启动。
+- **便携压缩包（`.zip`）**：解压到任意文件夹，直接运行 `AI Memory Card.exe`。
+
+普通用户不需要安装 **Python、Rust、Node.js、Conda**，也不需要克隆源码。Windows 发布包已经包含桌面壳、后端运行时、本地 SQLite 存储，以及后端 / 插件服务所需的内置 Python 运行时。
+
+### 开发者：从源码运行和修改
+
+如果你想修改前端、后端、桌面壳、调度算法或 AI 插件，请继续阅读下面的开发者启动步骤。这个路径需要开发工具链，因为你是在本机运行和重新构建源码。
+
 ## Getting Started
+
+下面是开发者源码启动流程。普通用户请优先使用上面的 `.msi` 或 `.zip` 发布包。
 
 <details open>
 <summary><strong>1. 环境准备</strong></summary>
@@ -151,7 +170,7 @@ flowchart LR
 克隆仓库：
 
 ```powershell
-git clone https://github.com/OWNER/ai-memory-card.git
+git clone https://github.com/WorldIWave/ai-memory-card.git
 cd ai-memory-card
 ```
 

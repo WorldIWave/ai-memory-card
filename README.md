@@ -44,14 +44,22 @@ In one loop:
 4. Evaluate understanding across concept, mechanism, boundary, and misconception dimensions.
 5. Schedule the next review with either a traditional policy or an optional AI/RL-assisted policy.
 
-## Download and Use Directly
+## Choose Your Path
 
-If you only want to try the desktop app, open [GitHub Releases](https://github.com/WorldIWave/ai-memory-card/releases) and download the package that matches your need:
+There are two ways to use this project, depending on whether you want to **use the app** or **develop the app**.
 
-- **Windows installer (`.msi`)**: recommended for normal users who want a standard install experience.
-- **Portable archive (`.zip`)**: useful when you want to unzip and run the app directly, or keep it in a custom folder.
+### For Users: Download and Run
 
-Developers can follow the source setup below.
+If you only want to use the desktop app, open [GitHub Releases](https://github.com/WorldIWave/ai-memory-card/releases) and download the package that matches your need:
+
+- **Windows installer (`.msi`)**: recommended for most users who want a normal install experience.
+- **Portable archive (`.zip`)**: unzip it anywhere and run `AI Memory Card.exe` directly.
+
+Normal users do **not** need to install Python, Rust, Node.js, Conda, or clone the source code. The Windows release package includes the desktop shell, backend runtime, local SQLite storage, and the embedded Python runtime needed by the bundled backend/plugin services.
+
+### For Developers: Run from Source
+
+If you want to modify the frontend, backend, desktop shell, scheduler, or AI plugin, follow the developer setup commands in [Getting Started](#getting-started-developers). This path needs the development toolchain because you are running and rebuilding the project from source.
 
 ## 中文简介
 
@@ -128,7 +136,9 @@ The app supports two scheduling modes from Settings:
 
 This makes the experimental scheduler useful without letting it take over the whole learning workflow.
 
-## Getting Started
+## Getting Started (Developers)
+
+This section is for contributors and researchers who want to run or modify the source code. If you only want to use the app, download the `.msi` or `.zip` release package instead.
 
 ### 1. Clone
 
